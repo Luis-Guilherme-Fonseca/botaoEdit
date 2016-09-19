@@ -43,8 +43,9 @@ function Edit() {
     var text, input;
     var notes = document.getElementById('notes');
 
+	//console.log(notes1.getAttribute(p));
     console.log(this);
-    text = notes.getElementsByTagName('p');
+    text = notes.getElementsByTagName('p')[0];
     console.log(text);
 
     notes.removeChild(this);
@@ -58,13 +59,6 @@ function Edit() {
     save.addEventListener('click', Save.bind(input));
     save.addEventListener('click', remove.bind(input));
     save.addEventListener('click', remove.bind(save));
-
-    var row = document.createElement('tr');
-    var cell = document.createElement('td');
-
-    var div = document.createElement('div');
-    div.className += 'input-group';
-
 
     notes.appendChild(input);
     notes.appendChild(save);
